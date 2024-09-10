@@ -9,7 +9,7 @@ namespace  Dung.LinearSearch
 			if ( targetMoney == 0 ) { targetMoney = money; }
 			if (money >= 2 * targetMoney) 
 			{
-				Console.WriteLine("Current money" + money); 
+				//Console.WriteLine("Current money" + money); 
 				return 0;
 			}
 			return 1 + calMonth(money * (1 + rate/100), rate);
@@ -25,7 +25,7 @@ namespace  Dung.LinearSearch
 				money = money + money * (rate / 100);
 				months++;
 			}
-            Console.WriteLine("Current money" + money);
+            //Console.WriteLine("Current money" + money);
             return months;
 		}
     }
