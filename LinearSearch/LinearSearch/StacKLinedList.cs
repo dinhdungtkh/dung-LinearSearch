@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 public class StackLinkedList<T>
 {
-    private int size;
-    private Node<T> head = null;
+    public int size;
+    public Node<T> head = null;
 
 
     public StackLinkedList()
@@ -41,5 +41,9 @@ public class StackLinkedList<T>
 
     public int Count() { return size; }
 
+    public bool IsEmpty()
+    {
+        return head == null;
+    }
 
 }
