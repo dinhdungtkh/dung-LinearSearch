@@ -8,7 +8,7 @@ namespace Dung.LinearSearch
         ///Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
         ///determine if the input string is valid.
         /// </summary>
-        StackLinkedList<char> charStack = new StackLinkedList<char>();
+        Stack<char> charStack = new Stack<char>();
 
         public bool IsValid(string s)
         {
@@ -19,7 +19,7 @@ namespace Dung.LinearSearch
                 char c = s[i];
                 if (c == '{' || c == '[' || c == '(')
                 {
-                    charStack.push(c);
+                    charStack.Push(c);
                 }
                 else if (c == '}' || c == ']' || c == ')')
                 {
@@ -27,7 +27,7 @@ namespace Dung.LinearSearch
                     {
                         return false;
                     }
-                    charStack.get();
+                    charStack.Pop();
                 }
                 else
                 {
@@ -47,22 +47,7 @@ namespace Dung.LinearSearch
                 default: throw new ArgumentException("Invalid bracket");
             }
         }
-
-        static void Main(string[] args)
-        {
-            Bai25LinearSearch test = new Bai25LinearSearch();
-            string s = "()";
-            string s1 = "()[]{}";
-            string s2 = "([])";
-            string s3 = "([)]";
-
-            Console.WriteLine($"Check Valid for '{s}': {test.IsValid(s)}");
-            Console.WriteLine($"Check Valid for '{s1}': {test.IsValid(s1)}");
-            Console.WriteLine($"Check Valid for '{s2}': {test.IsValid(s2)}");
-            Console.WriteLine($"Check Valid for '{s3}': {test.IsValid(s3)}");
-
-            Console.ReadLine();
-        }
+       
     }
 
 }

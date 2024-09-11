@@ -80,19 +80,19 @@ namespace demo
 
 
 
-            // Console.WriteLine("Bai 13" + " Sort product by category name ");
-            // linearSearch.sortByCategoryName(products, categorydemo);
-            // for (int i = 0; i < products.Count; i++)
-            // {
-            //     Console.WriteLine("name  " + products[i].name + " category id " + products[i].categoryID);
-            // }
+            //Console.WriteLine("Bai 13" + " Sort product by category name ");
+            //linearSearch.sortByCategoryName(products, categorydemo);
+            //for (int i = 0; i < products.Count; i++)
+            //{
+            //    Console.WriteLine("name  " + products[i].name + " category id " + products[i].categoryID);
+            //}
 
-            Console.WriteLine("Bai 14" + " Map product by category name ");
-            List<Product> mappedProducts = linearSearch.mapProductByCategory(products, categorydemo);
-            foreach (var product in mappedProducts)
-            {
-                Console.WriteLine("Product name: " + product.name + " Category id: " + product.categoryID + " Category name: " + product.categoryName);
-            }
+            //Console.WriteLine("Bai 14" + " Map product by category name ");
+            //List<Product> mappedProducts = linearSearch.mapProductByCategory(products, categorydemo);
+            //foreach (var product in mappedProducts)
+            //{
+            //    Console.WriteLine("Product name: " + product.name + " Category id: " + product.categoryID + " Category name: " + product.categoryName);
+            //}
 
             //Console.WriteLine("Bai 16" + " Min Product Price ");
             //Product minProduct = linearSearch.minByPrice(mappedProducts);
@@ -122,23 +122,45 @@ namespace demo
             //foreach (var item in myQueue)
             //{ Console.WriteLine("{0}", item); }
 
-            QueueLinkedList<string> myLinkedList = new QueueLinkedList<string>();
-            myLinkedList.Push("Queue 1");
-            myLinkedList.Push("Queue 2");
-            myLinkedList.Push("Queue 3");
-            myLinkedList.Push("Queue 4");
-            myLinkedList.Push("Queue 5");
-            myLinkedList.Push("Queue 6");
+            //QueueLinkedList<string> myLinkedList = new QueueLinkedList<string>();
+            //myLinkedList.Push("Queue 1");
+            //myLinkedList.Push("Queue 2");
+            //myLinkedList.Push("Queue 3");
+            //myLinkedList.Push("Queue 4");
+            //myLinkedList.Push("Queue 5");
+            //myLinkedList.Push("Queue 6");
 
-            Console.WriteLine("Total number of elements in the string are : " + myLinkedList.Count());
-            if (myLinkedList.Count() > 0)
-            {
-                Console.WriteLine("Head item: " + myLinkedList.Get());
-            }
-          
+            //Console.WriteLine("Total number of elements in the string are : " + myLinkedList.Count());
+            //if (myLinkedList.Count() > 0)
+            //{
+            //    Console.WriteLine("Head item: " + myLinkedList.Get());
+            //}
+            //Console.WriteLine("Head item: " + myLinkedList.Get());
+
+            //StackLinkedList<int> stackLinked = new StackLinkedList<int>();
+            //stackLinked.push(1);
+            //stackLinked.push(2);
+            //stackLinked.push(3);
+            //stackLinked.push(4);
+            //stackLinked.push(5);
+            //Console.WriteLine("total item in stack: " + stackLinked.Count());
+            //Console.WriteLine("Get item: " + stackLinked.get());
+            //// Console.WriteLine("Head item: " +  stackLinked.Peek());
+            //Console.WriteLine("Get item: " + stackLinked.get());
+            //Console.WriteLine("Get item: " + stackLinked.get());
+            //Console.WriteLine("Get item: " + stackLinked.get());
+            //Console.ReadLine();
+
+            Bai25LinearSearch test = new Bai25LinearSearch();
+            string s1 = "()[]{}";
+            string s2 = "([])";
+            string s3 = "([)]";
+
+            Console.WriteLine($"Check Valid for '{s1}': {test.IsValid(s1)}");
+            Console.WriteLine($"Check Valid for '{s2}': {test.IsValid(s2)}");
+            Console.WriteLine($"Check Valid for '{s3}': {test.IsValid(s3)}");
+
             Console.ReadLine();
-
-
         }
     }
 }
